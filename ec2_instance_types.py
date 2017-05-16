@@ -15,7 +15,7 @@ RESPONSE = requests.get(URL).json()
 # Get the length of the returned string
 LENGTH = len(RESPONSE) - 1
 # Generate the URL containing the list of ec2 instance types in JSON
-JSON_URL = 'https://raw.githubusercontent.com/boto/botocore/develop/botocore/data/ec2/' + \
+JSON_URL = 'https://raw.githubusercontent.com/boto/botocore/master/botocore/data/ec2/' + \
            RESPONSE[LENGTH]['name'] + "/" + 'service-2.json'
 # Get the response from the JSON file
 RESPONSE = requests.get(JSON_URL).json()
